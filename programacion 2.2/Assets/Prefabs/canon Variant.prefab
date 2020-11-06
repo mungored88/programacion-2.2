@@ -30,7 +30,7 @@ Transform:
   m_Father: {fileID: 281099289445529205}
   m_RootOrder: 103
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1136492451
+--- !u!114 &7881068615405858965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,11 +39,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3872519022492058726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dca4a7935c063643844c812ae0ae3f5, type: 3}
+  m_Script: {fileID: 11500000, guid: e7d5544fbddada741adefd4ed95b6bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8290732716133447970, guid: f0c2a86cb551f7743817add64e2a00a6, type: 3}
-  shootSpeed: 3
+  bullet: {fileID: 8290732716133447970, guid: 3e95762d353dbc24a8f4e5a966cf2576, type: 3}
+  shootSpeed: 1
   bulletOrigin: {fileID: 1137620666}
   keepShooting: 1
 --- !u!1001 &5087975347263790447
@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 9d806e3fd1742f84e95db1e9ada8e332,
         type: 3}
       propertyPath: m_Name
-      value: canon
+      value: canon Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d806e3fd1742f84e95db1e9ada8e332, type: 3}
