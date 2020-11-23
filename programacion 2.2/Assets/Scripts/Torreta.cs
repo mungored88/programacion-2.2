@@ -23,6 +23,7 @@ public abstract class Torreta : MonoBehaviour
     while (keepShooting) { 
         yield return new WaitForSeconds(shootSpeed);
         GameObject bulletInstance = Instantiate(bullet);
+        bulletInstance.transform.forward = bulletOrigin.forward;
         bulletInstance.transform.position = bulletOrigin.position;
     }
         yield return null;

@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     internal void recibirDaño()
     {
-        throw new NotImplementedException();
+        Debug.Log("asd");
     }
 
     private void OnCollisionStay(Collision collision)

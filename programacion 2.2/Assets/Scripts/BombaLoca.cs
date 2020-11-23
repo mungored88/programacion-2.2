@@ -7,10 +7,8 @@ public class BombaLoca : Enemy
     private SphereCollider collider;
     private Animator anim;
 
-    [SerializeField] private float distanceToPlayer;
     [SerializeField] private float distanciaParaCorrer;
     [SerializeField] private float distanciaParaExplotar;
-    [SerializeField] private float attackDistance;
     [SerializeField] private float runSpeed;
 
     private bool _exploto = false;
@@ -22,7 +20,6 @@ public class BombaLoca : Enemy
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 lookAtPos = Player.transform.position;
@@ -31,7 +28,7 @@ public class BombaLoca : Enemy
 
         distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        if(distanceToPlayer <= distanciaParaCorrer && !_exploto)
+        if (distanceToPlayer <= distanciaParaCorrer && !_exploto)
         {
             correrHaciaPlayer();
             anim.SetBool("walk", true);
@@ -53,15 +50,7 @@ public class BombaLoca : Enemy
 
     }
 
-    public IEnumerator hacerDaño() {
 
-        yield return new WaitForSeconds(1);
-        if (distanceToPlayer <= attackDistance)
-        {
-            Player.GetComponent<PlayerController>().recibirDaño();
-        }
-        yield return null;
-    }
 
     void correrHaciaPlayer()
     {

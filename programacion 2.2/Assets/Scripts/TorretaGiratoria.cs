@@ -16,7 +16,11 @@ public class TorretaGiratoria : Torreta
 
     void Update()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(character.position - transform.position), rotationSpeed * Time.deltaTime);
+        Quaternion rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(character.position - transform.position), rotationSpeed * Time.deltaTime);
+        rotation.z = 0;
+        rotation.x = 0;
+        this.transform.rotation = rotation;
+
     }
 
 
