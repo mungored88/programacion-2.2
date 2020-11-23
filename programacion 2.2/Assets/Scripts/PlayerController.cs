@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     internal void recibirDaño()
     {
-        Debug.Log("asd");
+        this.GetComponent<DamageTester>().daño();
     }
 
     private void OnCollisionStay(Collision collision)

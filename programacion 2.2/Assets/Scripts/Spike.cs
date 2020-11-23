@@ -10,7 +10,7 @@ public class Spike : Enemy
         anim.SetTrigger("EnterPlayer");
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine(hacerDaño());
+            StartCoroutine(hacerDañoEnSegundos(0.5f));
         }
     }
 }

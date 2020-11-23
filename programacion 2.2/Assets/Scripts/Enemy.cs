@@ -17,10 +17,11 @@ public abstract class Enemy : MonoBehaviour
 
 
 
-    public IEnumerator hacerDaño()
+    public IEnumerator hacerDañoEnSegundos(float segs)
     {
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(segs);
+        distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
         if (distanceToPlayer <= attackDistance)
         {
             Player.GetComponent<PlayerController>().recibirDaño();
