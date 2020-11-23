@@ -16,4 +16,9 @@ public class key : MonoBehaviour
     {
         return keytype;
     }
+
+    public void Update()
+    {
+        transform.Rotate(new Vector3(0,50*Time.deltaTime,0));
+    }
 }

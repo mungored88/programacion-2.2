@@ -11,7 +11,7 @@ public class keyholder : MonoBehaviour
     }
     public void AddKey(key.KeyType keyType)
     {
-        Debug.Log("agarro llave" + keyType);
+        Debug.Log("agarro llave " + keyType);
         keyList.Add(keyType);
     }
     public void removeKey(key.KeyType key)
