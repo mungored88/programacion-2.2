@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class doors : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private key.KeyType keytype;
+    public key.KeyType GetKeyType()
     {
-        
+        return keytype;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OpenDoor()
     {
-        
+        gameObject.SetActive(false);
     }
 }
