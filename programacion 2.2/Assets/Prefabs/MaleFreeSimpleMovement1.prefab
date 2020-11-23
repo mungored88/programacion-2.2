@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 288135414598723394}
   - component: {fileID: 8833317589336478464}
   - component: {fileID: 6727126093139179369}
+  - component: {fileID: 9039005830320912239}
   m_Layer: 0
   m_Name: MaleFreeSimpleMovement1
   m_TagString: Player
@@ -169,7 +170,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831634399742787187}
-  m_LocalRotation: {x: -0, y: 0.99884176, z: -0, w: -0.048117146}
+  m_LocalRotation: {x: 0, y: 0.9988417, z: -0, w: -0.04811737}
   m_LocalPosition: {x: 25.783203, y: 0.7300005, z: 25.824066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -276,6 +277,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTesterObj: {fileID: 5351453425992121570}
+--- !u!114 &9039005830320912239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831634399742787187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c037cc852fce844daf1babdad73c0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8831651476579585531
 GameObject:
   m_ObjectHideFlags: 0
