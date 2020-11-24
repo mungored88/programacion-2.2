@@ -23,7 +23,6 @@ public class BombaLoca : Enemy
     void Update()
     {
         Vector3 lookAtPos = Player.transform.position;
-        lookAtPos.y = transform.position.y;
         transform.LookAt(lookAtPos);
 
         distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
