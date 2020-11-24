@@ -30,16 +30,12 @@ public class BotonSaltar : MonoBehaviour,
     {
         jumpButton.position = eventData.position;
         jumpPressed = true;
-        Debug.Log(jumpPressed);
-
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         jumpButton.localPosition = Vector3.zero;
         jumpPressed = false;
-        Debug.Log(jumpPressed);
-
     }
 
     #endregion

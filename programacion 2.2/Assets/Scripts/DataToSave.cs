@@ -7,7 +7,7 @@ using System;
 public class DataToSave 
 {
     public int level;
-    public Checkpoint checkPoint;
+    public CheckPointOBJ checkPoint;
     public int lifes;
     public Data2 data;
 }
@@ -19,12 +19,7 @@ public class Data2
     public float b;
 }
 
-public class Checkpoint
-{
-    public float X;
-    public float Y;
-    public float Z;
-}
+
 
 
 

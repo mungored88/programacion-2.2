@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    public CheckPoint checkpoint;
+
     public bool esMobile = false;
     public JoystickController joystick;
     public enum ControlMode
@@ -57,7 +59,8 @@ public class PlayerController : MonoBehaviour
 
         joystick = gameObject.GetComponent<JoystickController>();
         esMobile = (controlMode == ControlMode.ANDROID);
-        
+
+        checkpoint = this.GetComponent<CheckPoint>();
 
 
     }
@@ -132,6 +135,20 @@ public class PlayerController : MonoBehaviour
         if ( esMobile && joystick.jumpPressed)
         {
             m_jumpInput = true;
+        }
+
+
+        //DEBUG
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            checkpoint.setCheckPoint(this.transform);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            CheckPointOBJ check = checkpoint.getLastCheckPoint();
+            this.transform.position = check.lastCheckPos;
+            this.transform.rotation = check.lastCheckRot;
         }
     }
     private void FixedUpdate()

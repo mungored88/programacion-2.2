@@ -45,8 +45,6 @@ public class SaveLoad : MonoBehaviour
     public void SaveFile()
     {
         var data = new DataToSave();
-        data.level = 1;
-
 
         StreamWriter file = File.CreateText(_path);
         string json = JsonUtility.ToJson(data, true);
