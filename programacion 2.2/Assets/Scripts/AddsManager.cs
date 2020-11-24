@@ -36,7 +36,7 @@ public class AddsManager : MonoBehaviour
         }
         else if(result==ShowResult.Skipped)
         {
-
+            //si lo skipeo
         } else
         {
             //dar vida
