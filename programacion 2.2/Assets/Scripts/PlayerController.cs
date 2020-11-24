@@ -6,12 +6,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    [SerializeField] private float m_moveSpeed = 2;
+    [SerializeField] private float m_moveSpeed = 6;
     [SerializeField] private float m_turnSpeed = 200;
     [SerializeField] private float m_jumpForce = 4;
 
     [SerializeField] private Animator m_animator = null;
     [SerializeField] private Rigidbody m_rigidBody = null;
+
+    [SerializeField] private ControlMode controlMode;
+
 
     private float m_currentV = 0;
     private float m_currentH = 0;
@@ -32,12 +35,31 @@ public class PlayerController : MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    public bool esMobile = false;
+    public JoystickController joystick;
+    public enum ControlMode
+    {
+        PC,
+        ANDROID
+    }
+
+    public ControlMode GetKeyType()
+    {
+        return controlMode;
+    }
+
+
 
     private void Awake()
     {
-        if (!m_animator) { gameObject.GetComponent<Animator>(); }
-        if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
-    
+        if (!m_animator) { m_animator = gameObject.GetComponent<Animator>(); }
+        if (!m_rigidBody) { m_rigidBody = gameObject.GetComponent<Rigidbody>(); }
+
+        joystick = gameObject.GetComponent<JoystickController>();
+        esMobile = (controlMode == ControlMode.ANDROID);
+        
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -101,14 +123,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (!m_jumpInput && Input.GetKey(KeyCode.Space))
+        {
+            m_jumpInput = true;
+        }
+        if ( esMobile && joystick.jumpPressed)
         {
             m_jumpInput = true;
         }
@@ -116,11 +137,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
-
         
        TankUpdate();
-
-        
 
         m_wasGrounded = m_isGrounded;
         m_jumpInput = false;
@@ -128,9 +146,17 @@ public class PlayerController : MonoBehaviour
 
     private void TankUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
-
+        float v = 0;
+        float h = 0;
+        if (!esMobile) { 
+         v = Input.GetAxis("Vertical");
+         h = Input.GetAxis("Horizontal");
+        }
+        if (esMobile)
+        {
+             v = joystick.getYValue();
+             h = joystick.getXValue();
+        }
         bool walk = Input.GetKey(KeyCode.LeftShift);
 
         if (v < 0)

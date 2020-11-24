@@ -43,10 +43,15 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    public JoystickController joystick;
+
     private void Awake()
     {
-        if (!m_animator) { gameObject.GetComponent<Animator>(); }
-        if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+       // if (!m_animator) { gameObject.GetComponent<Animator>(); }
+       // if (!m_rigidBody) { gameObject.GetComponent<Rigidbody>(); }
+        //if(!joystick) { gameObject.GetComponent<JoystickController>(); }
+
+        joystick = gameObject.GetComponent<JoystickController>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -110,6 +115,10 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         {
             m_jumpInput = true;
         }
+        if (joystick.jumpPressed)
+        {
+            m_jumpInput = true;
+        }
     }
 
     private void FixedUpdate()
@@ -137,8 +146,11 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private void TankUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        //float v = Input.GetAxis("Vertical");
+        //float h = Input.GetAxis("Horizontal");
+
+        float v = joystick.getYValue();
+        float h = joystick.getXValue();
 
         bool walk = Input.GetKey(KeyCode.LeftShift);
 
