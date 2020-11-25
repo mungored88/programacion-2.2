@@ -14,6 +14,7 @@ public class keyholder : sounds
     public void AddKey(key.KeyType keyType)
     {
         //Debug.Log("agarro llave " + keyType);
+        playersound.SoundPlay(playersound.clips[0]);
         keyList.Add(keyType);
     }
     public void removeKey(key.KeyType key)
