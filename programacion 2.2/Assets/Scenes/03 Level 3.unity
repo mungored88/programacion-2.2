@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 22561888}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: SAVELOAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4299,6 +4299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: controlMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833317589336478464, guid: 842053175d862c94ea5b4e1738e329e8,
+        type: 3}
+      propertyPath: save_load
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842053175d862c94ea5b4e1738e329e8, type: 3}

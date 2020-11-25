@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private ControlMode controlMode;
 
+    public SaveLoad save_load;
+
 
     private float m_currentV = 0;
     private float m_currentH = 0;
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour
         checkpoint = this.GetComponent<CheckPoint>();
         this.guardarCheckPoint();
 
+         
 
     }
 
@@ -150,6 +153,9 @@ public class PlayerController : MonoBehaviour
     public void guardarCheckPoint()
     {
         checkpoint.setCheckPoint(this.transform);
+
+        save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();
+        save_load.SaveFile();
     }
 
     public void loadCheckPoint()

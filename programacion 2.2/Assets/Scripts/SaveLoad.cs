@@ -56,6 +56,11 @@ public class SaveLoad : MonoBehaviour
             PlayerController p_cont = player.GetComponent<PlayerController>();
             checkpoint = p_cont.checkpoint.lastCheck;
             lifes = p_cont.vidas;
+            ContadorDeLlaves key_cont = player.GetComponent<ContadorDeLlaves>();
+            llaves.roja = key_cont.R;
+            llaves.azul = key_cont.B;
+            llaves.verde = key_cont.G;
+            llaves.amarilla = key_cont.Y;
         }
         finally
         {
