@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 6727126093139179369}
   - component: {fileID: 9039005830320912239}
   m_Layer: 0
-  m_Name: MaleFreeSimpleMovement1
+  m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
+  m_Radius: 0.2
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f003528fb9984349b663766d44cb7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 2
-  m_turnSpeed: 200
+  m_moveSpeed: 6
+  m_turnSpeed: 300
   m_jumpForce: 4
   m_animator: {fileID: 0}
   m_rigidBody: {fileID: 0}
