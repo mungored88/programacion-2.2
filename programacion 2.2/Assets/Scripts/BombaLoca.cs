@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class BombaLoca : Enemy
 {
-    private SphereCollider collider;
     private Animator anim;
     public AudioSource explosion;
 
-    [SerializeField] private float distanciaParaCorrer;
-    [SerializeField] private float distanciaParaExplotar;
-    [SerializeField] private float runSpeed;
+    [SerializeField] private float distanciaParaCorrer = 5;
+    [SerializeField] private float distanciaParaExplotar = 1;
+    [SerializeField] private float runSpeed = 3;
 
     private bool _exploto = false;
 
 
     void Awake()
     {
-        collider = GetComponent<SphereCollider>();
         anim = GetComponent<Animator>();
     }
 
@@ -49,8 +47,6 @@ public class BombaLoca : Enemy
         }
 
     }
-
-
 
     void correrHaciaPlayer()
     {

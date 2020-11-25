@@ -14,7 +14,7 @@ public class SaveLoad : MonoBehaviour
     {
         _path = Application.streamingAssetsPath + _SAVEPATH;
         //_path = Application.persistentDataPath + _SAVEPATH;
-        //Debug.Log(_path);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void Update()
@@ -26,7 +26,6 @@ public class SaveLoad : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F3))
         {
             DataToSave data = LoadFile();
-            Debug.Log(data.level);
         }
 
     }
@@ -44,8 +43,28 @@ public class SaveLoad : MonoBehaviour
 
     public void SaveFile()
     {
+        //Defaults
+        CheckPointOBJ checkpoint = new CheckPointOBJ();
+        int lifes = 5;
+        Llaves llaves = new Llaves();
+
         var data = new DataToSave();
 
+        try
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerController p_cont = player.GetComponent<PlayerController>();
+            checkpoint = p_cont.checkpoint.lastCheck;
+            lifes = p_cont.vidas;
+        }
+        finally
+        {
+            data.lifes = lifes;
+            data.checkPoint = checkpoint;
+            data.llaves = llaves;
+        }
+
+      
         StreamWriter file = File.CreateText(_path);
         string json = JsonUtility.ToJson(data, true);
 

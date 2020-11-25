@@ -5,6 +5,12 @@ using UnityEngine;
 public class doors : MonoBehaviour
 {
     [SerializeField] private key.KeyType keytype;
+
+    public doors(key.KeyType keytype)
+    {
+        this.keytype = keytype;
+    }
+
     public AudioSource doorsound;
     public key.KeyType GetKeyType()
     {

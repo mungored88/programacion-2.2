@@ -144,19 +144,6 @@ public class PlayerController : MonoBehaviour
             m_jumpInput = true;
         }
 
-
-        //DEBUG
-        if (Input.GetKeyDown(KeyCode.F4))
-        {
-            checkpoint.setCheckPoint(this.transform);
-        }
-
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            CheckPointOBJ check = checkpoint.getLastCheckPoint();
-            this.transform.position = check.lastCheckPos;
-            this.transform.rotation = check.lastCheckRot;
-        }
     }
 
 

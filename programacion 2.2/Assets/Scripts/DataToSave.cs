@@ -6,26 +6,16 @@ using System;
 [Serializable]
 public class DataToSave 
 {
-    public int level;
     public CheckPointOBJ checkPoint;
     public int lifes;
-    public Data2 data;
+    public Llaves llaves;
 }
 
 [Serializable]
-public class Data2
+public class Llaves
 {
-    public int a;
-    public float b;
+    public int roja = 0;
+    public int azul = 0;
+    public int verde = 0;
+    public int amarilla = 0;
 }
-
-
-
-
-
-//var time = DateTime.Now;
-//print(time);
-//var json = JsonUtility.ToJson((JsonDateTime)time);
-//print(json);
-//DateTime timeFromJson = JsonUtility.FromJson<JsonDateTime>(json);
-//print(timeFromJson);

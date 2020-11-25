@@ -13,7 +13,7 @@ public class ContadorDeVidas : MonoBehaviour
     public Sprite emptyHeart;
 
 
-    void Update()
+    public void Update()
     {
         
         if (Life > NumberOfHeart)

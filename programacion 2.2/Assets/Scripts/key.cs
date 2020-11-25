@@ -5,6 +5,12 @@ using UnityEngine;
 public class key : MonoBehaviour
 {
     [SerializeField] private KeyType keytype;
+
+    public key(KeyType keytype)
+    {
+        this.keytype = keytype;
+    }
+
     public enum KeyType 
     {
         red,
