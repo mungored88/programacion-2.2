@@ -63,10 +63,12 @@ public class PlayerController : MonoBehaviour
         joystick = gameObject.GetComponent<JoystickController>();
         esMobile = (controlMode == ControlMode.ANDROID);
 
-   
+    }
+    private void Start()
+    {
         checkpoint = this.GetComponent<CheckPoint>();
         this.guardarCheckPoint();
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)

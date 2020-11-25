@@ -12,9 +12,8 @@ public class SaveLoad : MonoBehaviour
     private string _SAVEPATH = "/Save.json";
     void Start()
     {
-        _path = Application.streamingAssetsPath + _SAVEPATH;
-        //_path = Application.persistentDataPath + _SAVEPATH;
-        DontDestroyOnLoad(this.gameObject);
+        //_path = Application.streamingAssetsPath + _SAVEPATH;
+        _path = Application.persistentDataPath + _SAVEPATH;
     }
 
     public void Update()
