@@ -46,4 +46,6 @@ public class AddsManager : MonoBehaviour
             SceneManager.LoadScene(data.checkPoint.scene);
         }
     }
+
+
 }

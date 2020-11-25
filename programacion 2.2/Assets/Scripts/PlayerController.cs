@@ -63,15 +63,10 @@ public class PlayerController : MonoBehaviour
         joystick = gameObject.GetComponent<JoystickController>();
         esMobile = (controlMode == ControlMode.ANDROID);
 
-        try
-        {
-            resetCharacter();
-        }
-        finally
-        {
-            checkpoint = this.GetComponent<CheckPoint>();
-            this.guardarCheckPoint();
-        }
+   
+        checkpoint = this.GetComponent<CheckPoint>();
+        this.guardarCheckPoint();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -242,30 +237,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void resetCharacter()
-    {
-        DataToSave data;
-        try
-        {
-            save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();
-            data = save_load.LoadFile();
-        }
-        catch
-        {
-            Debug.LogError("noSePudoResetear");
-            return;
-        }
-        CheckPointOBJ check = data.checkPoint;
-        this.transform.position = check.lastCheckPos;
-        this.transform.rotation = check.lastCheckRot;
-
-        vidas = 5;
-
-        ContadorDeLlaves contador = this.GetComponent<ContadorDeLlaves>();
-        contador.R = data.llaves.roja;
-        contador.B = data.llaves.azul;
-        contador.G = data.llaves.verde;
-        contador.Y = data.llaves.amarilla;
-    }
 
 }
