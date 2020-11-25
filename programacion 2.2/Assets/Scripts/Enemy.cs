@@ -16,6 +16,14 @@ public abstract class Enemy : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.GetComponent<PlayerController>().recibirDaño();
+        }
+        Destroy(this.gameObject);
+    }
 
     public IEnumerator hacerDañoEnSegundos(float segs)
     {
