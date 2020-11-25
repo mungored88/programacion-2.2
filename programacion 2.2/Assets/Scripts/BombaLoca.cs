@@ -6,6 +6,7 @@ public class BombaLoca : Enemy
 {
     private SphereCollider collider;
     private Animator anim;
+    
 
     [SerializeField] private float distanciaParaCorrer;
     [SerializeField] private float distanciaParaExplotar;
@@ -42,7 +43,7 @@ public class BombaLoca : Enemy
             anim.SetBool("walk", false);
             _exploto = true;
             anim.SetTrigger("attack01");
-
+                     
             StartCoroutine(hacerDañoEnSegundos(1));
             
         }
