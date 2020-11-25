@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class life : MonoBehaviour
+public class ContadorDeVidas : MonoBehaviour
 {
     public int Life;
     public int NumberOfHeart;
@@ -12,15 +12,10 @@ public class life : MonoBehaviour
     public Sprite fulHeart;
     public Sprite emptyHeart;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
+        
         if (Life > NumberOfHeart)
         {
             Life = NumberOfHeart;
@@ -47,20 +42,14 @@ public class life : MonoBehaviour
         }
         if (Life <= 0)
         {
-            //Die();
-        }
-    }
-    public void TakeDamage(int damage)
-    {
-        Life -= damage;
-        if (Life <= 0)
-        {
             Die();
         }
     }
+
     void Die()
     {
        GameObject.Destroy(this.gameObject);
-       SceneManager.LoadScene("lost");
+       SceneManager.LoadScene("04 lose");
     }
+
 }

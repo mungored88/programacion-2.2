@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private List<Collider> m_collisions = new List<Collider>();
 
     public CheckPoint checkpoint;
+    public int vidas = 5;
 
     public bool esMobile = false;
     public JoystickController joystick;
@@ -85,7 +86,11 @@ public class PlayerController : MonoBehaviour
     internal void recibirDaño()
     {
         loadCheckPoint();
+        this.vidas -= 1;
+        this.GetComponent<ContadorDeVidas>().Life = this.vidas;
         this.GetComponent<DamageTester>().daño();
+
+        //ActualizarCorazones... en caso de tener 0 Proceder a video o Perder
     }
 
     private void OnCollisionStay(Collision collision)

@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: -7120263343534837995}
   - component: {fileID: 2503346869645930034}
   - component: {fileID: -6808772084330012431}
+  - component: {fileID: 6447450979107624418}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -251,6 +252,7 @@ MonoBehaviour:
   m_rigidBody: {fileID: 0}
   controlMode: 0
   checkpoint: {fileID: 0}
+  vidas: 5
   esMobile: 0
   joystick: {fileID: 0}
 --- !u!114 &6727126093139179369
@@ -427,6 +429,28 @@ MonoBehaviour:
   lastCheck:
     lastCheckPos: {x: 0, y: 0, z: 0}
     lastCheckRot: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6447450979107624418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831634399742787187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81602ec55f5cdeb45a78037fd9353ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 5
+  NumberOfHeart: 5
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fulHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
 --- !u!1 &8831651476579585531
 GameObject:
   m_ObjectHideFlags: 0
