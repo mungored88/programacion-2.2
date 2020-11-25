@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -75,18 +75,18 @@ LightmapSettings:
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRSampleCount: 512
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentSampleCount: 256
     m_PVREnvironmentReferencePointCount: 2048
-    m_PVRFilteringMode: 2
-    m_PVRDenoiserTypeDirect: 0
-    m_PVRDenoiserTypeIndirect: 0
-    m_PVRDenoiserTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 0
+    m_PVREnvironmentMIS: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -3356,6 +3356,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1746437035086045179, guid: 842053175d862c94ea5b4e1738e329e8,
+        type: 3}
+      propertyPath: myStick
+      value: 
+      objectReference: {fileID: 52502328}
+    - target: {fileID: 1746437035086045179, guid: 842053175d862c94ea5b4e1738e329e8,
+        type: 3}
+      propertyPath: myButton
+      value: 
+      objectReference: {fileID: 2019311988}
     - target: {fileID: 8828768471749647095, guid: 842053175d862c94ea5b4e1738e329e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3454,7 +3464,7 @@ PrefabInstance:
     - target: {fileID: 8833317589336478464, guid: 842053175d862c94ea5b4e1738e329e8,
         type: 3}
       propertyPath: controlMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 288135414598723394, guid: 842053175d862c94ea5b4e1738e329e8, type: 3}
