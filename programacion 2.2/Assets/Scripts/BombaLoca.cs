@@ -6,7 +6,7 @@ public class BombaLoca : Enemy
 {
     private SphereCollider collider;
     private Animator anim;
-    
+    public AudioSource explosion;
 
     [SerializeField] private float distanciaParaCorrer;
     [SerializeField] private float distanciaParaExplotar;
@@ -45,7 +45,7 @@ public class BombaLoca : Enemy
             anim.SetTrigger("attack01");
                      
             StartCoroutine(hacerDañoEnSegundos(1));
-            
+            explosion.Play(0);
         }
 
     }

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class keyholder : MonoBehaviour
+public class keyholder : sounds
 {
     private List<key.KeyType> keyList;
+    public sounds playersound;
     private void Awake()
     {
         keyList = new List<key.KeyType>();
+        
     }
     public void AddKey(key.KeyType keyType)
     {
@@ -24,6 +26,7 @@ public class keyholder : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
+
         key key = collider.GetComponent<key>();
         if(key!=null)
         {

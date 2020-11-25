@@ -7,6 +7,7 @@ public class Vortex : MonoBehaviour
 {
 
     public string scene;
+    public AudioSource vortex;
 
     // Update is called once per frame
     void Update()
@@ -16,7 +17,7 @@ public class Vortex : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
+        vortex.Play(0);
         if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(scene);

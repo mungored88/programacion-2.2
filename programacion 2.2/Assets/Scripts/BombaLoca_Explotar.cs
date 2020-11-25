@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BombaLoca_Explotar : StateMachineBehaviour
 {
-    public AudioSource explosion;
+    
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -20,7 +21,8 @@ public class BombaLoca_Explotar : StateMachineBehaviour
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        explosion.Play(0);
+        
+        
         Destroy(animator.gameObject);
     }
 

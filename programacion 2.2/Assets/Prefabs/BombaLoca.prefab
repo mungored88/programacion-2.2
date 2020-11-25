@@ -19968,7 +19968,7 @@ GameObject:
   - component: {fileID: 351569988820766328}
   - component: {fileID: 406291106644688300}
   - component: {fileID: 355913693208128305}
-  - component: {fileID: -3668962994452486380}
+  - component: {fileID: 7572637667355812720}
   m_Layer: 0
   m_Name: BombaLoca
   m_TagString: Untagged
@@ -20027,10 +20027,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
   attackDistance: 2
+  explosion: {fileID: 7572637667355812720}
   distanciaParaCorrer: 7
   distanciaParaExplotar: 1
   runSpeed: 3
---- !u!82 &-3668962994452486380
+--- !u!82 &7572637667355812720
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20052,7 +20053,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 21.287579
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

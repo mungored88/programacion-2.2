@@ -60,7 +60,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keytype: 1
-  giro: 0
 --- !u!95 &-3571196763734219572
 Animator:
   serializedVersion: 3
@@ -71,7 +70,7 @@ Animator:
   m_GameObject: {fileID: 3034846262946259407}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f0953e7f1d3544f4eb9f110730c39089, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
