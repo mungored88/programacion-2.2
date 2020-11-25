@@ -12,7 +12,13 @@ public class doors : MonoBehaviour
     }
     public void OpenDoor()
     {
-        
+        doorsound.Play(0);
+        StartCoroutine(abrirPuerta());
+    }
+
+    public IEnumerator abrirPuerta()
+    {
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }
 }
