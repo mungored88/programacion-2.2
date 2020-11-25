@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
         esMobile = (controlMode == ControlMode.ANDROID);
 
         checkpoint = this.GetComponent<CheckPoint>();
+        this.guardarCheckPoint();
 
 
     }
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
 
     internal void recibirDaño()
     {
+        loadCheckPoint();
         this.GetComponent<DamageTester>().daño();
     }
 
@@ -151,6 +153,20 @@ public class PlayerController : MonoBehaviour
             this.transform.rotation = check.lastCheckRot;
         }
     }
+
+
+    public void guardarCheckPoint()
+    {
+        checkpoint.setCheckPoint(this.transform);
+    }
+
+    public void loadCheckPoint()
+    {
+        CheckPointOBJ check = checkpoint.getLastCheckPoint();
+        this.transform.position = check.lastCheckPos;
+        this.transform.rotation = check.lastCheckRot;
+    }
+
     private void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
