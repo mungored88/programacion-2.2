@@ -19969,6 +19969,7 @@ GameObject:
   - component: {fileID: 406291106644688300}
   - component: {fileID: 355913693208128305}
   - component: {fileID: 7572637667355812720}
+  - component: {fileID: 7083567850534717686}
   m_Layer: 0
   m_Name: BombaLoca
   m_TagString: Untagged
@@ -20128,6 +20129,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &7083567850534717686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357477209394825084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58663845, y: 0.69592077, z: 0.5215279}
+  m_Center: {x: 0, y: 0.3449753, z: -0.018668175}
 --- !u!1 &357479916105850554
 GameObject:
   m_ObjectHideFlags: 0
