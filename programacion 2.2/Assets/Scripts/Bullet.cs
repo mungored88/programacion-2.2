@@ -18,4 +18,13 @@ public class Bullet : Enemy
         bulletTransform.position += bulletTransform.right * -speed * Time.deltaTime;
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.GetComponent<PlayerController>().recibirDaño();
+        }
+        Destroy(this.gameObject);
+    }
+
 }

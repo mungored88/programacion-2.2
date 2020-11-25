@@ -20029,7 +20029,7 @@ MonoBehaviour:
   distanceToPlayer: 0
   attackDistance: 2
   explosion: {fileID: 7572637667355812720}
-  distanciaParaCorrer: 7
+  distanciaParaCorrer: 5
   distanciaParaExplotar: 1
   runSpeed: 3
 --- !u!82 &7572637667355812720

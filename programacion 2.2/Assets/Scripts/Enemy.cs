@@ -22,7 +22,7 @@ public abstract class Enemy : MonoBehaviour
         {
             Player.GetComponent<PlayerController>().recibirDaño();
         }
-        Destroy(this.gameObject);
+       // Destroy(this.gameObject);
     }
 
     public IEnumerator hacerDañoEnSegundos(float segs)

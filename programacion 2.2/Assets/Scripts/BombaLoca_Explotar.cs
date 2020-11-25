@@ -21,8 +21,8 @@ public class BombaLoca_Explotar : StateMachineBehaviour
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
-        
+
+        animator.gameObject.GetComponent<BombaLoca>().explosion.Play(0);
         Destroy(animator.gameObject);
     }
 
