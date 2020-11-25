@@ -11,6 +11,32 @@ public class keyholder : sounds
     {
         keyList = new List<key.KeyType>();
         contadorLLaves = this.gameObject.GetComponent<ContadorDeLlaves>();
+
+    }
+
+    public void Start()
+    {
+        int cant_llavesR = contadorLLaves.R;
+        int cant_llavesB = contadorLLaves.B;
+        int cant_llavesG = contadorLLaves.G;
+        int cant_llavesY = contadorLLaves.Y;
+
+        for (int i = 0; i < cant_llavesR; i++)
+        {
+            keyList.Add(key.KeyType.red);
+        }
+        for (int i = 0; i < cant_llavesB; i++)
+        {
+            keyList.Add(key.KeyType.blue);
+        }
+        for (int i = 0; i < cant_llavesG; i++)
+        {
+            keyList.Add(key.KeyType.green);
+        }
+        for (int i = 0; i < cant_llavesY; i++)
+        {
+            keyList.Add(key.KeyType.yellow);
+        }
     }
     public void AddKey(key.KeyType keyType)
     {

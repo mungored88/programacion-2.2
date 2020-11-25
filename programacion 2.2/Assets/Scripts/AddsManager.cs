@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.SceneManagement;
 
 public class AddsManager : MonoBehaviour
 {
@@ -39,7 +40,10 @@ public class AddsManager : MonoBehaviour
             //si lo skipeo
         } else
         {
-            //dar vida
+            SaveLoad save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();
+            DataToSave data = save_load.LoadFile();
+
+            SceneManager.LoadScene(data.checkPoint.scene);
         }
     }
 }
