@@ -34,10 +34,12 @@ public class AddsManager : MonoBehaviour
         if (result==ShowResult.Failed)
         {
             //no da nada
+            SceneManager.LoadScene("00 menu");
         }
         else if(result==ShowResult.Skipped)
         {
             //si lo skipeo
+            SceneManager.LoadScene("00 menu");
         } else
         {
             SaveLoad save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();

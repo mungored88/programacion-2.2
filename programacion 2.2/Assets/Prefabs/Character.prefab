@@ -247,14 +247,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 6
-  m_turnSpeed: 300
+  m_turnSpeed: 100
   m_jumpForce: 4
   m_animator: {fileID: 0}
   m_rigidBody: {fileID: 0}
-  controlMode: 0
+  controlMode: 1
+  save_load: {fileID: 0}
   checkpoint: {fileID: 0}
   vidas: 5
-  esMobile: 0
+  esMobile: 1
   joystick: {fileID: 0}
 --- !u!114 &6727126093139179369
 MonoBehaviour:

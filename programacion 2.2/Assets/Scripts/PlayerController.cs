@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
         }
         catch
         {
-            Debug.LogError("NoHAyObjectDeSaveData");
+            //Debug.LogError("NoHAyObjectDeSaveData");
         }
     }
 
