@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 319331299538816970}
   - component: {fileID: 885709298}
   - component: {fileID: 7993942299187464148}
+  - component: {fileID: 3205830842202944582}
   m_Layer: 0
   m_Name: pCube67
   m_TagString: Untagged
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keytype: 1
+  DoorAnim: {fileID: 3205830842202944582}
   doorsound: {fileID: 7993942299187464148}
 --- !u!65 &885709298
 BoxCollider:
@@ -311,6 +313,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &3205830842202944582
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034747660303581624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d976570dbb0dc541ba0548aacb6c080, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4034762244188965710
 GameObject:
   m_ObjectHideFlags: 0

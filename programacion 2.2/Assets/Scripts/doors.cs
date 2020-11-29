@@ -5,6 +5,12 @@ using UnityEngine;
 public class doors : MonoBehaviour
 {
     [SerializeField] private key.KeyType keytype;
+    public Animator DoorAnim;
+
+    public void Start()
+    {
+        DoorAnim = this.GetComponent<Animator>();
+    }
 
     public doors(key.KeyType keytype)
     {
@@ -20,11 +26,15 @@ public class doors : MonoBehaviour
     {
         doorsound.Play(0);
         StartCoroutine(abrirPuerta());
+        
     }
 
     public IEnumerator abrirPuerta()
     {
-        yield return new WaitForSeconds(0.5f);
-        gameObject.SetActive(false);
+        DoorAnim.SetTrigger("opendoor");
+        
+        yield return new WaitForSeconds(3f);
+        Destroy(this.gameObject);
     }
+
 }
