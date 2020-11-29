@@ -42,8 +42,7 @@ public class BombaLoca : Enemy
             _exploto = true;
             anim.SetTrigger("attack01");
                      
-            StartCoroutine(hacerDañoEnSegundos(1));
-          
+            StartCoroutine(hacerDañoEnSegundos(1.5f));
         }
 
     }

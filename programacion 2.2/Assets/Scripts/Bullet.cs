@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : Enemy
+public class Bullet : MonoBehaviour
 {
     public Transform bulletTransform;
     public float speed = 10f;
 
-    private void Awake()
+    private void Start()
     {
         bulletTransform = this.GetComponent<Transform>();
-
     }
 
-    void Update()
+    void FixedUpdate()
     {
         bulletTransform.position += bulletTransform.right * -speed * Time.deltaTime;
     }
@@ -22,7 +21,7 @@ public class Bullet : Enemy
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player.GetComponent<PlayerController>().recibirDaño();
+            collision.gameObject.GetComponent<PlayerController>().recibirDaño();
         }
         Destroy(this.gameObject);
     }

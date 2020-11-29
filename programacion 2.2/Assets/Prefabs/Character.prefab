@@ -247,7 +247,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 6
+<<<<<<< Updated upstream
   m_turnSpeed: 100
+=======
+  m_turnSpeed: 150
+>>>>>>> Stashed changes
   m_jumpForce: 4
   m_animator: {fileID: 0}
   m_rigidBody: {fileID: 0}
