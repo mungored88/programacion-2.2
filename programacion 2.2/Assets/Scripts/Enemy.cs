@@ -9,33 +9,32 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float distanceToPlayer;
     [SerializeField] protected float attackDistance;
 
+
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
 
-    public virtual void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Player.GetComponent<PlayerController>().recibirDaño();
         }
+       // Destroy(this.gameObject);
     }
-
 
     public IEnumerator hacerDañoEnSegundos(float segs)
     {
+
         yield return new WaitForSeconds(segs);
-
         distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
-
         if (distanceToPlayer <= attackDistance)
         {
             Player.GetComponent<PlayerController>().recibirDaño();
         }
         yield return null;
     }
-
 
 }
