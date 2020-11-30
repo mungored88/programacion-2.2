@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Torreta : MonoBehaviour
+public class Torreta : MonoBehaviour
 {
 
   public GameObject bullet;
@@ -10,7 +10,11 @@ public abstract class Torreta : MonoBehaviour
   public Transform bulletOrigin;
   public bool keepShooting = true;
 
-  protected virtual void Shoot()
+  public virtual void Start()
+  {
+        Shoot();
+  }
+    protected virtual void Shoot()
     {
         StartCoroutine(StartShooting());
     }

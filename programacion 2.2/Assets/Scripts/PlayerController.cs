@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private ControlMode controlMode;
 
-    public SaveLoad save_load;
+    //public SaveLoad save_load;
+
+    public AudioSource correr;
 
 
     private float m_currentV = 0;
@@ -68,7 +70,6 @@ public class PlayerController : MonoBehaviour
     {
         checkpoint = this.GetComponent<CheckPoint>();
         this.guardarCheckPoint();
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -167,19 +168,19 @@ public class PlayerController : MonoBehaviour
     {
         m_animator.SetBool("Grounded", m_isGrounded);
         
-       TankUpdate();
+       correrUpdate();
 
         m_wasGrounded = m_isGrounded;
         m_jumpInput = false;
     }
 
-    private void TankUpdate()
+    private void correrUpdate()
     {
         float v = 0;
         float h = 0;
-        if (!esMobile) { 
-         v = Input.GetAxis("Vertical");
-         h = Input.GetAxis("Horizontal");
+        if (!esMobile) {
+            v = Input.GetAxis("Vertical");
+            h = Input.GetAxis("Horizontal");
         }
         //if (esMobile)
         //{
@@ -203,6 +204,15 @@ public class PlayerController : MonoBehaviour
 
         transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
         transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
+
+        if (m_currentV > 0)
+        {
+            correr.Play();
+        }
+        else
+        {
+            correr.Stop();
+        }
 
         m_animator.SetFloat("MoveSpeed", m_currentV);
 

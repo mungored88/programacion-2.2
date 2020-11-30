@@ -8,9 +8,8 @@ public class TorretaGiratoria : Torreta
     public Transform character;
     public float rotationSpeed = 10f;
 
-    void Start()
-    {
-        Shoot();
+    void Awake()
+    { 
         character = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 

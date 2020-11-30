@@ -6,10 +6,12 @@ public class SpikeTrigger : Spike
 {
 
     public Animator anim;
+    public AudioSource sound;
 
     private void OnTriggerEnter(Collider other)
     {
         anim.SetTrigger("EnterPlayer");
+        sound.PlayDelayed(0.3f);
      }
 
 }
