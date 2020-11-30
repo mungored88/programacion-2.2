@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spike : Enemy
+public class Spike : MonoBehaviour
 {
-    public Animator anim;
     private void OnTriggerEnter(Collider other)
     {
-        anim.SetTrigger("EnterPlayer");
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine(hacerDañoEnSegundos(0.5f));
+            other.gameObject.GetComponent<PlayerController>().recibirDaño();
         }
     }
+ 
 }
 

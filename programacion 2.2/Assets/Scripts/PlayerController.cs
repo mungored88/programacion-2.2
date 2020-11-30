@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     public int vidas = 5;
 
     public bool esMobile = false;
-    public JoystickController joystick;
+   // public JoystickController joystick;
     public enum ControlMode
     {
         PC,
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if (!m_animator) { m_animator = gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { m_rigidBody = gameObject.GetComponent<Rigidbody>(); }
 
-        joystick = gameObject.GetComponent<JoystickController>();
+        //joystick = gameObject.GetComponent<JoystickController>();
         esMobile = (controlMode == ControlMode.ANDROID);
 
     }
@@ -143,10 +143,10 @@ public class PlayerController : MonoBehaviour
         {
             m_jumpInput = true;
         }
-        if ( esMobile && joystick.jumpPressed)
-        {
-            m_jumpInput = true;
-        }
+       // if ( esMobile && joystick.jumpPressed)
+       // {
+       //     m_jumpInput = true;
+       // }
 
     }
 
@@ -154,15 +154,6 @@ public class PlayerController : MonoBehaviour
     public void guardarCheckPoint()
     {
         checkpoint.setCheckPoint(this.transform);
-
-        try { 
-        save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();
-        save_load.SaveFile();
-        }
-        catch
-        {
-            //Debug.LogError("NoHAyObjectDeSaveData");
-        }
     }
 
     public void loadCheckPoint()
@@ -190,11 +181,11 @@ public class PlayerController : MonoBehaviour
          v = Input.GetAxis("Vertical");
          h = Input.GetAxis("Horizontal");
         }
-        if (esMobile)
-        {
-             v = joystick.getYValue();
-             h = joystick.getXValue();
-        }
+        //if (esMobile)
+        //{
+        //     v = joystick.getYValue();
+        //     h = joystick.getXValue();
+        //}
         bool walk = Input.GetKey(KeyCode.LeftShift);
 
         if (v < 0)
