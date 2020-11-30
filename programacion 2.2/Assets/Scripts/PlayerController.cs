@@ -17,8 +17,7 @@ public class PlayerController : MonoBehaviour
 
     //public SaveLoad save_load;
 
-    public AudioSource correr;
-
+    
 
     private float m_currentV = 0;
     private float m_currentH = 0;
@@ -205,14 +204,7 @@ public class PlayerController : MonoBehaviour
         transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
         transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
 
-        if (m_currentV > 0)
-        {
-            correr.Play();
-        }
-        else
-        {
-            correr.Stop();
-        }
+       
 
         m_animator.SetFloat("MoveSpeed", m_currentV);
 
