@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : Enemy
+public class Bullet : MonoBehaviour
 {
     public Transform bulletTransform;
     public float speed = 10f;
@@ -22,7 +22,7 @@ public class Bullet : Enemy
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player.GetComponent<PlayerController>().recibirDaño();
+            collision.gameObject.GetComponent<PlayerController>().recibirDaño();
         }
         Destroy(this.gameObject);
     }

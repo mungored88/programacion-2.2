@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class AddsManager : MonoBehaviour
 {
-    public enum TypeAds
+    /*public enum TypeAds
     {
         video,
         rewardedVideo
@@ -47,7 +47,7 @@ public class AddsManager : MonoBehaviour
 
             SceneManager.LoadScene(data.checkPoint.scene);
         }
-    }
+    }*/
 
 
 }
