@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class keyholder : sounds
+public class keyholder : Sounds
 {
     private List<key.KeyType> keyList;
-    public sounds playersound;
+    public Sounds playersound;
     public ContadorDeLlaves contadorLLaves;
     private void Awake()
     {
