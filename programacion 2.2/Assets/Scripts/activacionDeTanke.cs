@@ -5,7 +5,7 @@ using UnityEngine;
 public class activacionDeTanke : MonoBehaviour
 {
 
-    public Camera camera;
+    public Camera cameraaa;
     protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -13,6 +13,8 @@ public class activacionDeTanke : MonoBehaviour
             Debug.Log("BorrarPlayer");//Player.GetComponent<PlayerController>().recibirDaño();
             GetComponent<TankController>().enabled = true;
             GetComponent<ShootWithTank>().enabled = true;
+
+            
         }
     }
 }
