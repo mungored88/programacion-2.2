@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
 
     public CheckPoint checkpoint;
     public int vidas = 5;
+    public GameObject defender;
+    public bool isDefender;
 
     public bool esMobile = false;
     public JoystickController joystick;
@@ -89,6 +91,12 @@ public class PlayerController : MonoBehaviour
 
     internal void recibirDaño()
     {
+        if(isDefender)
+        {
+            isDefender = false;
+            defender.gameObject.SetActive(false);
+            return;
+        }
         loadCheckPoint();
         this.vidas -= 1;
         this.GetComponent<ContadorDeVidas>().Life = this.vidas;
@@ -241,7 +249,7 @@ public class PlayerController : MonoBehaviour
     
     public void GetShield(int shield)
     {
-       // this.strength += shield;
-       
+        isDefender = true;
+        defender.gameObject.SetActive(true);
     }
 }
