@@ -4151,6 +4151,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175611398}
   m_Mesh: {fileID: 4300002, guid: a3dc8da8b210b014aa2dfd1e4a35dddf, type: 3}
+--- !u!114 &185066443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1746437035086045179, guid: 842053175d862c94ea5b4e1738e329e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1128623311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f7bcaffcfc50242a712fe92cb9388f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &187614280
 GameObject:
   m_ObjectHideFlags: 0
@@ -22067,8 +22079,13 @@ PrefabInstance:
     - target: {fileID: 8833317589336478464, guid: 842053175d862c94ea5b4e1738e329e8,
         type: 3}
       propertyPath: controlMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8833317589336478464, guid: 842053175d862c94ea5b4e1738e329e8,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 185066443}
     - target: {fileID: 9039005830320912239, guid: 842053175d862c94ea5b4e1738e329e8,
         type: 3}
       propertyPath: m_Enabled
@@ -28240,6 +28257,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487949820}
   m_Mesh: {fileID: 4300002, guid: e95387ab71d79df4bb0be5661f337937, type: 3}
+--- !u!1 &1489083202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489083205}
+  - component: {fileID: 1489083204}
+  - component: {fileID: 1489083203}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1489083203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489083202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1489083204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489083202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1489083205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489083202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 111.42, y: 1.21, z: 115.84}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 273
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489305524
 GameObject:
   m_ObjectHideFlags: 0
@@ -29872,6 +29955,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 218
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1591764721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6761096967115601611, guid: a90a586fdab845140893f72e5d3e0d27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1916036707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f7bcaffcfc50242a712fe92cb9388f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593175840
 GameObject:
   m_ObjectHideFlags: 0
@@ -36962,6 +37057,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4406905205766309444, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: controlMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406905205766309444, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1591764721}
+    - target: {fileID: 4406905205766309444, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: m_turnSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5247271031414050304, guid: a90a586fdab845140893f72e5d3e0d27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37035,8 +37145,18 @@ PrefabInstance:
     - target: {fileID: 6761096967115601611, guid: a90a586fdab845140893f72e5d3e0d27,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6761096967115601611, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: myStick
+      value: 
+      objectReference: {fileID: 804082777}
+    - target: {fileID: 6761096967115601611, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: myButton
+      value: 
+      objectReference: {fileID: 1297495752}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90a586fdab845140893f72e5d3e0d27, type: 3}
 --- !u!1 &1922360717
@@ -39606,7 +39726,7 @@ PrefabInstance:
     - target: {fileID: 2005116116826305968, guid: 251c8624e01c15b468d2b8804159d173,
         type: 3}
       propertyPath: m_RootOrder
-      value: 273
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 2005116116826305968, guid: 251c8624e01c15b468d2b8804159d173,
         type: 3}
