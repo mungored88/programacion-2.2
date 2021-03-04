@@ -244,7 +244,9 @@ public class PlayerController : MonoBehaviour
     public void GetHp(int hp)
     {
         this.vidas += hp;
+        if (vidas > 5) vidas = 5;       
         this.GetComponent<ContadorDeVidas>().Life = this.vidas;
+
     }
     
     public void GetShield(int shield)

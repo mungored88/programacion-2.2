@@ -8,6 +8,7 @@ TagManager:
   - speed potion
   - life potion
   - shield potion
+  - CargaASYNC
   layers:
   - Default
   - TransparentFX
