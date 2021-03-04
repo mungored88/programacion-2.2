@@ -6,16 +6,7 @@ using System;
 [Serializable]
 public class DataToSave 
 {
-    public CheckPointOBJ checkPoint;
-    public int lifes;
-    public Llaves llaves;
+    public int nivelesDesbloqueados;
 }
 
-[Serializable]
-public class Llaves
-{
-    public int roja = 0;
-    public int azul = 0;
-    public int verde = 0;
-    public int amarilla = 0;
-}
+

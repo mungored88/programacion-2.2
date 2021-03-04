@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
     public JoystickController joystick;
     public enum ControlMode
     {
-        PC,
-        ANDROID
+        ANDROID,
+        PC
     }
 
     public ControlMode GetKeyType()

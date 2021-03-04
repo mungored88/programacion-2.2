@@ -13,10 +13,6 @@ public class Vortex : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3(0, 100 * Time.deltaTime, 0));
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("00 menu");
-        }
     }
 
     void OnTriggerEnter(Collider other)

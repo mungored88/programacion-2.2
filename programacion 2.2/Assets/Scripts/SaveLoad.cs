@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine.SceneManagement;
+
 
 [Serializable]
 public class SaveLoad : MonoBehaviour
@@ -10,24 +12,20 @@ public class SaveLoad : MonoBehaviour
    
     public string _path;
     private string _SAVEPATH = "/Save.json";
-    void Start()
+
+    private int nivel;
+    void Awake()
     {
-        _path = Application.streamingAssetsPath + _SAVEPATH;
-       // _path = Application.persistentDataPath + _SAVEPATH;
+        //_path = Application.streamingAssetsPath + _SAVEPATH;
+        _path = Application.persistentDataPath + _SAVEPATH;
+        //Debug.Log(Application.persistentDataPath);
     }
 
-    public void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            SaveFile();
-        }
-        if (Input.GetKeyDown(KeyCode.F3))
-        {
-            DataToSave data = LoadFile();
-        }
-
+        SaveFile();
     }
+
 
     public DataToSave LoadFile()
     {
@@ -42,33 +40,31 @@ public class SaveLoad : MonoBehaviour
 
     public void SaveFile()
     {
-        //Defaults
-        CheckPointOBJ checkpoint = new CheckPointOBJ();
-        int lifes = 5;
-        Llaves llaves = new Llaves();
 
         var data = new DataToSave();
 
         try
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            PlayerController p_cont = player.GetComponent<PlayerController>();
-            checkpoint = p_cont.checkpoint.lastCheck;
-            lifes = p_cont.vidas;
-            ContadorDeLlaves key_cont = player.GetComponent<ContadorDeLlaves>();
-            llaves.roja = key_cont.R;
-            llaves.azul = key_cont.B;
-            llaves.verde = key_cont.G;
-            llaves.amarilla = key_cont.Y;
+            String active = SceneManager.GetActiveScene().name;
+            nivel = int.Parse(active.Split()[2]);
+        }
+        catch
+        {
+            nivel = 1;
         }
         finally
         {
-            data.lifes = lifes;
-            data.checkPoint = checkpoint;
-            data.llaves = llaves;
+            data.nivelesDesbloqueados = nivel;
         }
 
-      
+        DataToSave dataLoaded = LoadFile();
+        //no guarda si es nivel menor ya que reemplazaria
+        //los niveles desbloqueados
+        if(dataLoaded.nivelesDesbloqueados > nivel) return;
+
+ 
+
+
         StreamWriter file = File.CreateText(_path);
         string json = JsonUtility.ToJson(data, true);
 

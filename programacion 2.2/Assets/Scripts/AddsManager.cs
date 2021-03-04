@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class AddsManager : MonoBehaviour
 {
-    /*public enum TypeAds
+    public enum TypeAds
     {
         video,
         rewardedVideo
@@ -45,9 +45,8 @@ public class AddsManager : MonoBehaviour
             SaveLoad save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();
             DataToSave data = save_load.LoadFile();
 
-            SceneManager.LoadScene(data.checkPoint.scene);
         }
-    }*/
+    }
 
 
 }

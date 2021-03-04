@@ -8,21 +8,20 @@ public class Boss : MonoBehaviour
     public Transform[] positions;
     public int positionActual = 0;
     public float speed = 5;
-    public float vidas = 5;
+    public int vidas = 5;
     public Rigidbody rb;
+
+    public Animator anim;
 
     public NavMeshAgent myAgent;
     // Start is called before the first frame update
     void Start()
     {
         myAgent = this.GetComponent<NavMeshAgent>();
+        anim = this.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {        
-         
-    }
+   
 
     public void moveToNextPosition()
     {
@@ -31,6 +30,11 @@ public class Boss : MonoBehaviour
         
     }
 
+    internal void recibirDaño()
+    {
+        this.vidas -= 1;
+        moveToNextPosition();
+    }
 
-   
+
 }

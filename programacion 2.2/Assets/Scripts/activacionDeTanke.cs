@@ -5,12 +5,16 @@ using UnityEngine;
 public class activacionDeTanke : MonoBehaviour
 {
 
-    public Camera cameraaa;
+    public GameObject camera1;
+    public GameObject camera2;
+
     protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("BorrarPlayer");//Player.GetComponent<PlayerController>().recibirDaño();
+            collision.gameObject.SetActive(false);
+            camera1.SetActive(false);
+            camera2.SetActive(true);
             GetComponent<TankController>().enabled = true;
             GetComponent<ShootWithTank>().enabled = true;
 
