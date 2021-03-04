@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/03 Level 3.unity
     guid: 9e2e94dc7afe0e740ab694e9324b033d
   - enabled: 1
+    path: Assets/Scenes/04 BossLevel 4.unity
+    guid: 6ff9f4ebc722ebe44961cd06ea977c2f
+  - enabled: 1
     path: Assets/Scenes/03 win.unity
     guid: 3ba9cbc553d6d484388297117ddfe5ae
   - enabled: 1
@@ -32,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/pc level.unity
     guid: 190e003a3cda0b646be71c7a43ddaec7
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: ea3f65dfeb37d4f41981d4c2d8c60538
   m_configObjects: {}
