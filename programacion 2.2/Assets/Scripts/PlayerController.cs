@@ -232,5 +232,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    
+    public void GetHp(int hp)
+    {
+        this.vidas += hp;
+        this.GetComponent<ContadorDeVidas>().Life = this.vidas;
+    }
+    
+    public void GetShield(int shield)
+    {
+       // this.strength += shield;
+       
+    }
 }

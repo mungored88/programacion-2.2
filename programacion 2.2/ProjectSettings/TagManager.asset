@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - SAVELOAD
+  - speed potion
+  - life potion
+  - shield potion
   layers:
   - Default
   - TransparentFX
