@@ -15,6 +15,7 @@ public class BotonSaltar : MonoBehaviour,
 {
     public bool jumpPressed;
     public RectTransform jumpButton;
+    public RectTransform fireButton;
 
     void Start()
     {
@@ -29,12 +30,14 @@ public class BotonSaltar : MonoBehaviour,
     public void OnPointerDown(PointerEventData eventData)
     {
         jumpButton.position = eventData.position;
+        fireButton.position = eventData.position;
         jumpPressed = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         jumpButton.localPosition = Vector3.zero;
+        fireButton.localPosition = Vector3.zero;
         jumpPressed = false;
     }
 

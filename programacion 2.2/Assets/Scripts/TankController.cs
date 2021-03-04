@@ -88,7 +88,7 @@ public class TankController : MonoBehaviour
             m_jumpInput = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || joystick.jumpPressed)
         {
             this.GetComponent<ShootWithTank>().Disparar();
         }

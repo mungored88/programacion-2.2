@@ -13,10 +13,13 @@ public class activacionDeTanke : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.SetActive(false);
-            camera1.SetActive(false);
             camera2.SetActive(true);
+            camera1.SetActive(false);
             GetComponent<TankController>().enabled = true;
             GetComponent<ShootWithTank>().enabled = true;
+            GetComponent<AudioListener>().enabled = true;
+
+            GetComponent<JoystickController>().SetTankButton();
 
             
         }
