@@ -38,6 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bbe6920ad9fe4429c2a4c3ef95d60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonido: {fileID: 1715881989946928198, guid: c492eb278c1a0c046993633209064249, type: 3}
   hp: 1
 --- !u!1001 &7751648658263294485
 PrefabInstance:
@@ -48,7 +49,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1999239547283070, guid: d027d4bce170c4abf8619a7d7980440e, type: 3}
       propertyPath: m_Name
-      value: Life potion
+      value: Life potion Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1999239547283070, guid: d027d4bce170c4abf8619a7d7980440e, type: 3}
       propertyPath: m_TagString

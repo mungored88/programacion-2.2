@@ -38,7 +38,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cac25a941a538e469eec10e9209cbe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2
+  sonido: {fileID: 1715881989946928198, guid: c492eb278c1a0c046993633209064249, type: 3}
+  pwr: 1
 --- !u!1001 &799382672479688335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48,7 +49,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1021588353636906, guid: f75e1608d9f1e4f06a5027de3c813b5d, type: 3}
       propertyPath: m_Name
-      value: Power potion
+      value: Power potion Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1021588353636906, guid: f75e1608d9f1e4f06a5027de3c813b5d, type: 3}
       propertyPath: m_TagString

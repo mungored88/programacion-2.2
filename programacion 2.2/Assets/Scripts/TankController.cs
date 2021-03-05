@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankController : MonoBehaviour
+public class TankController : MonoBehaviour, IPotionGrabber
 {
 
 
@@ -34,6 +34,10 @@ public class TankController : MonoBehaviour
 
     public bool esMobile = true;
     public JoystickController joystick;
+
+
+    public AudioSource getDaniooSound;
+    public int danioDeTanke = 1;
 
 
 
@@ -71,6 +75,7 @@ public class TankController : MonoBehaviour
     {
         //loadCheckPoint();
         this.vidas -= 1;
+        getDaniooSound.PlayOneShot(getDaniooSound.clip);
         this.GetComponent<ContadorDeVidas>().Life = this.vidas;
     }
 
@@ -150,6 +155,21 @@ public class TankController : MonoBehaviour
         this.transform.rotation = check.lastCheckRot;
     }
 
+    public void GetHp(int hp)
+    {
+        this.vidas += hp;
+        if (vidas > 5) vidas = 5;
+        this.GetComponent<ContadorDeVidas>().Life = this.vidas;
 
+    }
 
+    public void GetShield(int shield)
+    {
+        return;
+    }
+
+    public void GetPwr(int pwr)
+    {
+        danioDeTanke += pwr;
+    }
 }

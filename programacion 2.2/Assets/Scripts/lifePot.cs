@@ -7,7 +7,7 @@ public class lifePot : potions
     public int hp = 1;
     public override void DarStats(Collider other)
     {
-        other.gameObject.GetComponent<PlayerController>().GetHp(this.hp);
+        other.gameObject.GetComponent<IPotionGrabber>().GetHp(this.hp);
 
     }
 }

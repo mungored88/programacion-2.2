@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class speedPot : potions
+public class powerPot : potions
 {
-    public int spd;
+    public int pwr = 1;
     public override void DarStats(Collider other)
     {
-       // other.gameObject.GetComponent<PlayerController>().GetSpeed(this.spd);
+        other.gameObject.GetComponent<IPotionGrabber>().GetPwr(this.pwr);
 
     }
 }

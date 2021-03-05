@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int danio = 1;
     public Transform bulletTransform;
     public float speed = 10f;
 
@@ -32,7 +33,7 @@ public class Bullet : MonoBehaviour
         }
         if (collision.gameObject.tag == "Boss")
         {
-            collision.gameObject.GetComponent<Boss>().recibirDaño();
+            collision.gameObject.GetComponent<Boss>().recibirDaño(this.danio);
         }
         Destroy(this.gameObject);
     }

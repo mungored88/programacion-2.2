@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPotionGrabber
 {
 
     [SerializeField] private float m_moveSpeed = 6;
@@ -253,5 +253,10 @@ public class PlayerController : MonoBehaviour
     {
         isDefender = true;
         defender.gameObject.SetActive(true);
+    }
+
+    public void GetPwr(int pwr)
+    {
+        return;
     }
 }
