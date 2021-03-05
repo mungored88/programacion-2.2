@@ -397,6 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPressed: 0
   jumpButton: {fileID: 863125991979030618}
+  fireButton: {fileID: 7793853637708163614}
 --- !u!1 &7964198173497360722
 GameObject:
   m_ObjectHideFlags: 0

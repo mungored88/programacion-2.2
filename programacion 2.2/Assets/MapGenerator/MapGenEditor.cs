@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor (typeof(MapGenScript))]
-public class MapGenEditor : Editor {
+//[CustomEditor (typeof(MapGenScript))]
+public class MapGenEditor : MonoBehaviour {
 
-    public override void OnInspectorGUI()
+   /* public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
@@ -15,5 +15,5 @@ public class MapGenEditor : Editor {
         {
             myScript.PressButon();
         }
-    }
+    }*/
 }

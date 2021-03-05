@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour, IPotionGrabber
         loadCheckPoint();
         this.vidas -= 1;
         this.GetComponent<ContadorDeVidas>().Life = this.vidas;
-        this.GetComponent<DamageTester>().daño();
+        //this.GetComponent<DamageTester>().daño();
 
         //ActualizarCorazones... en caso de tener 0 Proceder a video o Perder
     }

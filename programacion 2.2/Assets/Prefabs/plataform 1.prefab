@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 3574851612707531802}
   - component: {fileID: 3574851612707531797}
   - component: {fileID: 3574851612707531796}
+  - component: {fileID: 3518371790502012315}
   - component: {fileID: 3574851612707531803}
   m_Layer: 0
   m_Name: Floor
@@ -156,6 +157,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.03999999, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &3518371790502012315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574851612707531798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.050922003, y: 0.050922006, z: 0.0042104498}
+  m_Center: {x: 0.00000023794045, y: -7.132208e-17, z: -0.00000007336762}
 --- !u!114 &3574851612707531803
 MonoBehaviour:
   m_ObjectHideFlags: 0
