@@ -2796,6 +2796,11 @@ PrefabInstance:
       propertyPath: vortex
       value: 
       objectReference: {fileID: 1676127968}
+    - target: {fileID: 7060851427114502861, guid: b3d9b2da5e0ecde43870bf60080b6884,
+        type: 3}
+      propertyPath: nextLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7460726881984706764, guid: b3d9b2da5e0ecde43870bf60080b6884,
         type: 3}
       propertyPath: m_LocalPosition.x

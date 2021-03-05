@@ -42,8 +42,10 @@ public class AddsManager : MonoBehaviour
             SceneManager.LoadScene("00 menu");
         } else
         {
-            SaveLoad save_load = GameObject.FindGameObjectWithTag("SAVELOAD").GetComponent<SaveLoad>();
-            DataToSave data = save_load.LoadFile();
+            int lvl = FindObjectOfType<ObjParaCargarAsync>().nivelACargar;
+            string scene = "0"+lvl+" level " + lvl;
+            if (lvl == 4) scene = "04 BossLevel 4";
+            SceneManager.LoadScene(scene);
 
         }
     }

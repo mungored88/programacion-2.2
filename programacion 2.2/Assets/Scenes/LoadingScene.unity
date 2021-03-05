@@ -766,6 +766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vortex
       objectReference: {fileID: 0}
+    - target: {fileID: 7380150006260892185, guid: b3d9b2da5e0ecde43870bf60080b6884,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7460726881984706764, guid: b3d9b2da5e0ecde43870bf60080b6884,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -854,7 +859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1770723888
 AudioSource:
   m_ObjectHideFlags: 0
