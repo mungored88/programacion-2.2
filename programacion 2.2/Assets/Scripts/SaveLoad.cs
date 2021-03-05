@@ -31,7 +31,13 @@ public class SaveLoad : MonoBehaviour
     {
         if (!File.Exists(_path))
         {
-            SaveFile();
+            var data1 = new DataToSave();
+            data1.nivelesDesbloqueados = 1;
+            StreamWriter file = File.CreateText(_path);
+            string json = JsonUtility.ToJson(data1, true);
+
+            file.Write(json);
+            file.Close();
         }
 
         string data = File.ReadAllText(_path);
@@ -45,11 +51,12 @@ public class SaveLoad : MonoBehaviour
 
         try
         {
-            String active = SceneManager.GetActiveScene().name;
+            string active = SceneManager.GetActiveScene().name;
             nivel = int.Parse(active.Split()[2]);
         }
         catch
         {
+            //Debug.Log("Catch");
             nivel = 1;
         }
         finally
@@ -60,9 +67,10 @@ public class SaveLoad : MonoBehaviour
         DataToSave dataLoaded = LoadFile();
         //no guarda si es nivel menor ya que reemplazaria
         //los niveles desbloqueados
-        if(dataLoaded.nivelesDesbloqueados > nivel) return;
+        //Debug.Log(dataLoaded.nivelesDesbloqueados);
+        //Debug.Log(nivel);
+        if (dataLoaded.nivelesDesbloqueados > nivel) return;
 
- 
 
 
         StreamWriter file = File.CreateText(_path);
