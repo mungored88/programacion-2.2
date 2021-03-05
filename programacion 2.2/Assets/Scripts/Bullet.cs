@@ -22,7 +22,17 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerController>().recibirDaño();
+            try { 
+                collision.gameObject.GetComponent<PlayerController>().recibirDaño();
+            }
+            catch
+            {
+                collision.gameObject.GetComponent<TankController>().recibirDaño();
+            }
+        }
+        if (collision.gameObject.tag == "Boss")
+        {
+            collision.gameObject.GetComponent<Boss>().recibirDaño();
         }
         Destroy(this.gameObject);
     }

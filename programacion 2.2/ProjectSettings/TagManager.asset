@@ -9,6 +9,7 @@ TagManager:
   - life potion
   - shield potion
   - CargaASYNC
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - Bullet
   - Torreta
   - Tank
-  - 
-  - 
+  - Fireball
+  - Boss
   - 
   - 
   - 

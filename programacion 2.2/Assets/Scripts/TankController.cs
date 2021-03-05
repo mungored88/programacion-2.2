@@ -60,7 +60,6 @@ public class TankController : MonoBehaviour
     private void Start()
     {
         checkpoint = this.GetComponent<CheckPoint>();
-        // this.guardarCheckPoint();
 
         Sounds sound = this.GetComponent<Sounds>();
         this.GetComponent<Sounds>().SoundPlay(sound.clips[0]);
@@ -73,8 +72,6 @@ public class TankController : MonoBehaviour
         //loadCheckPoint();
         this.vidas -= 1;
         this.GetComponent<ContadorDeVidas>().Life = this.vidas;
-        this.GetComponent<DamageTester>().daño();
-        //ActualizarCorazones... en caso de tener 0 Proceder a video o Perder
     }
 
     private void Update()

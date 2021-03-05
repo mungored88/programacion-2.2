@@ -11,9 +11,14 @@ public class Boss : MonoBehaviour
     public int vidas = 5;
     public Rigidbody rb;
 
+
     public Animator anim;
 
     public NavMeshAgent myAgent;
+
+   
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,18 +26,22 @@ public class Boss : MonoBehaviour
         anim = this.GetComponent<Animator>();
     }
 
-   
+
+
+
 
     public void moveToNextPosition()
     {
             Vector3 posToGo = positions[Random.Range(0, positions.Length)].position;
             myAgent.SetDestination(posToGo);
-        
+
     }
 
     internal void recibirDaño()
     {
+        anim.SetTrigger("getdamage");
         this.vidas -= 1;
+        if(vidas <= 0) { anim.SetTrigger("dead"); myAgent.speed = 0; return; }
         moveToNextPosition();
     }
 

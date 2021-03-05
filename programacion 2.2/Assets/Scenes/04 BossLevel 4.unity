@@ -25699,6 +25699,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medfan_SquareBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2853573975186051655, guid: 251c8624e01c15b468d2b8804159d173,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251c8624e01c15b468d2b8804159d173, type: 3}
 --- !u!114 &1297495752 stripped
@@ -36642,7 +36647,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1895501790
 BoxCollider:
@@ -36652,7 +36657,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895501784}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1.3367207, z: 1}
@@ -37220,6 +37225,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 556234587717697719, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1157950430724250532, guid: 5bd55d7d58eef01488f6e475e512ab38,
+        type: 3}
     - target: {fileID: 2492663557916882144, guid: a90a586fdab845140893f72e5d3e0d27,
         type: 3}
       propertyPath: hearts.Array.size
@@ -37331,6 +37342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: toon_tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247271031414346272, guid: a90a586fdab845140893f72e5d3e0d27,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6035984556215330236, guid: a90a586fdab845140893f72e5d3e0d27,
         type: 3}
@@ -39126,6 +39142,11 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 119.39
       objectReference: {fileID: 0}
+    - target: {fileID: 101831266387906543, guid: 021edbd47fdd3564786525ba5fc368da,
+        type: 3}
+      propertyPath: m_Speed
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4875733820409076823, guid: 021edbd47fdd3564786525ba5fc368da,
         type: 3}
       propertyPath: m_Size.x
@@ -39195,6 +39216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Devil boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325462360737605005, guid: 021edbd47fdd3564786525ba5fc368da,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 021edbd47fdd3564786525ba5fc368da, type: 3}
@@ -40075,6 +40101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Medfan_SquareBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853573975186051655, guid: 251c8624e01c15b468d2b8804159d173,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251c8624e01c15b468d2b8804159d173, type: 3}

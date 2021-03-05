@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 6035984556215330236}
   m_Layer: 11
   m_Name: toon_tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ced7ced110093418eaa8231968a024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
 --- !u!1 &5247271031414346274
 GameObject:
   m_ObjectHideFlags: 0
